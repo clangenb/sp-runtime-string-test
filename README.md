@@ -1,4 +1,4 @@
-### Tests fix for using sp-runtime-s `format_runtime_string!` macro
+# Tests fix for using sp-runtime's `format_runtime_string!` macro
 
 ## Build
 
