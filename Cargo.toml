@@ -5,8 +5,7 @@ edition = "2021"
 
 [dependencies]
 log = { version = "0.4.22", default-features = false }
-sp-io = { path = "../polkadot-sdk/substrate/primitives/io", default-features = false }
-sp-runtime = { path = "../polkadot-sdk/substrate/primitives/runtime", default-features = false}
+sp-runtime  = { default-features = false, git = "https://github.com/clangenb/polkadot-sdk", branch = "cl/fix-alloc-in-sp-runtime" }
 
 # Compile crate with the following crates to get the error:
 # error[E0433]: failed to resolve: use of undeclared crate or module `alloc`
@@ -16,5 +15,4 @@ sp-runtime = { path = "../polkadot-sdk/substrate/primitives/runtime", default-fe
 #  |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ use of undeclared crate or module `alloc`
 #  |
 #  = note: this error originates in the macro `sp_runtime::format_runtime_string` (in Nightly builds, run with -Z macro-backtrace for more info)
-#sp-io = { version = "37.0.0", default-features = false }
 #sp-runtime = { version = "38.0.0", default-features = false }
